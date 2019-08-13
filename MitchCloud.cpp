@@ -2,21 +2,21 @@
 #include "MitchCloud.h"
 #include <istream>
 #include <time.h>
-usinig namespace std;
+using namespace std;
 
 //===============REGISTER CLASS IMPLEMENTATION===========================
 
-void Register::login()
+void Register::login()                                  //Creating a basic user login using string variables
 {
-  string username;
-  string password;
+  string username;                                      //Creating a username string variable
+  string password;                                      //Creating a password string variable
   
-  cout << "Please enter your username." << endl;
-  cin >> username;
-  cout << "Please enter your password." << endl;
-  cin >> password;
+  cout << "Please enter your username." << endl;        //Prompting to enter in the username
+  cin >> username;                                      //Storing the username in the variable
+  cout << "Please enter your password." << endl;        //Prompting to enter in the password
+  cin >> password;                                      //Storing the password to the variable
   
-  do 
+  do                                                    //Do while to compare the username and passwords. If they match then we set the User to the clerkID
   {
     if(m_clerkID.checkUsername(username) == true && m_clerkID.checkPassword(password) == true){
       m_currentUser = m_clerkID;
